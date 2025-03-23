@@ -8,6 +8,28 @@
   </head>
 
   <body>
+    <form>
+      <div style="display: flex; flex-direction: row">
+        <input
+          class="input"
+          type="text"
+          name="q"
+          placeholder="Search images..."
+          autocomplete="off"
+        />
+        <button class="submit-btn" type="submit">Search</button>
+      </div>
+      <span class="loader" style="display: none">Load&nbsp;ng</span>
+    </form>
+
+    <div id="gallery"></div>
+
+    <div class="more-btn-cont">
+      <button class="more-btn" type="button" style="display: none">
+        Load More
+      </button>
+    </div>
+
     <script type="module" src="./main.js"></script>
   </body>
 </html>

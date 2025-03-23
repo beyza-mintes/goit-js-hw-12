@@ -1,0 +1,181 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+form {
+  margin-top: 36px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input {
+  width: 272px;
+  height: 40px;
+  box-sizing: border-box;
+  padding-left: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  margin-right: 8px;
+}
+.submit-btn {
+  width: 91px;
+  height: 40px;
+  color: #ffffff;
+  background-color: #4e75ff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: rgb(11, 11, 144);
+}
+
+/* loader css */
+.loader {
+  color: #2e2626;
+  position: relative;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  letter-spacing: 4px;
+  box-sizing: border-box;
+  margin: 40px auto 0px;
+}
+.loader::before {
+  content: '';
+  position: absolute;
+  right: 70px;
+  bottom: 10px;
+  height: 28px;
+  width: 5.15px;
+  background: currentColor;
+  box-sizing: border-box;
+  animation: animloader1 1s linear infinite alternate;
+}
+.loader::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 125px;
+  top: 2px;
+  border-radius: 50%;
+  background: red;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite alternate;
+}
+
+@keyframes animloader {
+  0% {
+    transform: translate(0px, 0px) scaleX(1);
+  }
+  14% {
+    transform: translate(-12px, -16px) scaleX(1.05);
+  }
+  28% {
+    transform: translate(-27px, -28px) scaleX(1.07);
+  }
+  42% {
+    transform: translate(-46px, -35px) scaleX(1.1);
+  }
+  57% {
+    transform: translate(-70px, -37px) scaleX(1.1);
+  }
+  71% {
+    transform: translate(-94px, -32px) scaleX(1.07);
+  }
+  85% {
+    transform: translate(-111px, -22px) scaleX(1.05);
+  }
+  100% {
+    transform: translate(-125px, -9px) scaleX(1);
+  }
+}
+
+@keyframes animloader1 {
+  0% {
+    box-shadow: 0 -6px, -122.9px -8px;
+  }
+  25%,
+  75% {
+    box-shadow: 0 0px, -122.9px -8px;
+  }
+  100% {
+    box-shadow: 0 0px, -122.9px -16px;
+  }
+}
+
+#gallery {
+  display: grid; /* Grid düzeni oluşturur. */
+  grid-template-columns: repeat(
+    3,
+    360px
+  ); /* Her satırda 3 resim olacak şekilde ayarladık. */
+  grid-gap: 24px; /* Resimler arasında 24px boşluk sağlar. Hem yatayda hem dikeyde geçerlidir. */
+  justify-content: center; /* Grid elemanlarını yatayda merkeze yerleştirir. */
+}
+/* ------------------------------------- */
+.gallery-cont {
+  width: 360px;
+  height: 200px;
+  border: 1px solid #2e2626;
+}
+.gallery-a {
+  width: 100%;
+}
+img {
+  width: 100%;
+  height: 152px;
+  display: block;
+}
+.gallery-info {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+}
+.info-item {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.5;
+  text-align: center;
+  min-width: 0;
+}
+.info-item p:first-child {
+  font-weight: 600;
+}
+.more-btn-cont {
+  display: flex;
+  justify-content: center;
+}
+.more-btn {
+  width: 125px;
+  height: 40px;
+  color: #ffffff;
+  background-color: #4e75ff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  margin: 20px auto 0px;
+}
+.more-btn:hover {
+  background-color: rgb(11, 11, 144);
+}
